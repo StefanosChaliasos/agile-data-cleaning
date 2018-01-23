@@ -26,7 +26,7 @@ My inspiration was a data cleaning proccess I implemented in order to create a d
 Assume we have 20 csv files that we want to merge into one csv file. The file names are like: example_1.csv etc..
 
 1. Create a new file with the first row (columns names) of our files:
-	
+
 	```bash
 	head -1 example_1.csv > data.csv
 	```
@@ -36,7 +36,7 @@ Assume we have 20 csv files that we want to merge into one csv file. The file na
 	for i in example_{1..20}.csv; do sed -i '' -e 1d $i; done
 	```
 3. Merge the files:
-	
+
 	```bash
 	cat example_{1..20}.csv >> data
 	```
@@ -46,7 +46,7 @@ Assume we have 20 csv files that we want to merge into one csv file. The file na
 	cat data.csv > temp_data
 	cat temp_data | sort -r | uniq > data.csv
 	```
-	
+
 ### <a name="create1"></a>Create a table from a csv file
 Let's say we want to create a new table with the columns 2,3,5 of data.csv.
 
@@ -65,7 +65,7 @@ cut -d ',' -f 4 data.csv | sort -r | uniq > table2.csv
 We have a table (table3.csv) and we want to check if there are any duplicate ids (column 1).
 
 1. To check if there are duplicates we must check if the two results are the same:
-	
+
 	```bash
 	cut -d ',' -f 1 table3.csv | sort | uniq | wc -l
 	cat table3.csv | sort | uniq | wc -l
@@ -75,7 +75,7 @@ We have a table (table3.csv) and we want to check if there are any duplicate ids
 	```bash
 	cut -d ',' -f 1 table3.csv | sort | uniq -c
 	```
-	
+
 ## <a name="pandas"></a>Pandas Jupyter Notebooks
 
 ### <a name="add_id"></a>Add an id column
@@ -86,7 +86,7 @@ We have a table (table3.csv) and we want to check if there are any duplicate ids
 
 * [create-date-table.ipynb](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/jupyter-notebooks/create-date-table.ipynb)
 * In our example we create a new table ([dates.csv](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/dummy_data/dates.csv)) from the bday column of [data.csv](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/dummy_data/data.csv). The columns of the new table are: id, month, year (we could also include a day column if we wanted to).
-	
+
 ## <a name="python"></a>Python Scripts
 
 ### <a name="match"></a>Match
@@ -106,4 +106,4 @@ We have a table (table3.csv) and we want to check if there are any duplicate ids
 **[Stefanos Chaliasos](https://github.com/StefanosChaliasos)**
 
 ## Licence
-This project is licensed under the ... Licence — see [LICENSE.md]() file for details.
+This project is licensed under the GNU Lesser General Public License v3.0 Licence — see [LICENSE.md]() file for details.
