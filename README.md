@@ -80,21 +80,21 @@ We have a table (table3.csv) and we want to check if there are any duplicate ids
 
 ### <a name="add_id"></a>Add an id column
 
-* [add_id.ipynb]()
+* [add_id.ipynb](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/jupyter-notebooks/add_id.ipynb)
 
 ### Create a Table from a specific column
 
-* [create-date-table.ipynb]()
-* In our example we create a new table ([dates.csv]()) from the bday column of [data.csv](). The columns of the new table are: id, month, year (we could also include a day column if we wanted to).
+* [create-date-table.ipynb](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/jupyter-notebooks/create-date-table.ipynb)
+* In our example we create a new table ([dates.csv](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/dummy_data/dates.csv)) from the bday column of [data.csv](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/dummy_data/data.csv). The columns of the new table are: id, month, year (we could also include a day column if we wanted to).
 	
 ## <a name="python"></a>Python Scripts
 
 ### <a name="match"></a>Match
 
-[match_ids.py]()
+[match_ids.py](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/python-scripts/match_ids.py)
 
 * A python script that matches and changes the values of a column with another table's id.
-* In our example we match the bday column of [data.csv]() with a row of [dates.csv]() and then we update the bday column with the appropriate id.
+* In our example we match the bday column of [data.csv](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/dummy_data/data.csv) with a row of [dates.csv](https://github.com/StefanosChaliasos/agile-data-cleaning/blob/master/dummy_data/dates.csv) and then we update the bday column with the appropriate id.
 
 
 ## Contributing
