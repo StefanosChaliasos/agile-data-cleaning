@@ -55,7 +55,7 @@ awk -F, {'OFS=",";print $2,$3,$5'} data.csv > table1.csv
 ```
 
 ### <a name="create2"></a>Create a table with unique values of a column of a csv file
-Let's say you want to create a new table with the unique values of line 4 of data.csv.
+Let's say we want to create a new table with the unique values of line 4 of data.csv.
 
 ```bash
 cut -d ',' -f 4 data.csv | sort -r | uniq > table2.csv
